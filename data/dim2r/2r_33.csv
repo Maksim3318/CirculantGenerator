@@ -1,0 +1,5 @@
+Vertices,Gen set,Diameter,Average distance,Bisection width,Connections
+33,1 6,4,2.75,14,66
+33,1 7,4,2.75,16,66
+33,1 9,4,2.75,20,66
+33,1 14,4,2.75,30,66
