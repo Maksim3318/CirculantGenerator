@@ -1,6 +1,6 @@
 # CirculantGenerator
 
-## Software solution for searching for optimal and quasi-optimal circulant topology graphs 
+## Software solution for searching for optimal and quasioptimal circulant topology graphs 
 
 src - source code  
 data - optimal circulant graphs  
@@ -10,7 +10,7 @@ qdata - quasioptimal circulant graphs
 
 On the command line, the input line is **\<V\> \<K\>** \<qr\> \<q_amount\>  
 
-By default, an optimal graph of dimension **K** with **V** vertices is searched. Flag **q** enables search for quasipotential graph, flag **r** enables search among ring circulants. To specify the number of quasi-optimal graphs to search for, enter the value **q_amount**.
+By default, an optimal graph of dimension **K** with **V** vertices is searched. Flag **q** enables search for quasioptimal graphs, flag **r** enables search among ring circulants. To specify the number of quasi-optimal graphs to search for, enter the value **q_amount**.
 
 **V** and **K** are necessary parameters. 
 
