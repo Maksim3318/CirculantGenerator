@@ -33,7 +33,7 @@ extern const std::vector<std::vector<size_t>> steps = [] {
     for (auto k = 2; k < max_k + 1; ++k) {
         int size = 10;
         if (k == 2) {
-            size = 50;
+            size = 35;
         }
         if (k == 3) {
             size = 20;

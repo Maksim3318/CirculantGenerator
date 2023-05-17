@@ -10,7 +10,7 @@ uint8_t optimal_diameter(int x, int k);
 
 double optimal_avg(int x, int k);
 
-const int max_d = 50;
+const int max_d = 35;
 const int max_k = 10;
 
 extern const std::vector<double> factorials;

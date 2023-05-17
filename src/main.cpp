@@ -12,6 +12,7 @@ int main() {
     std::string query;
     const std::string err_msg = "Incorrect query";
     const std::string save_msg = "Result saved to ";
+
     while (getline(std::cin, query)) {
         if (query == "!q") {
             break;
