@@ -26,7 +26,7 @@ std::vector<uint8_t> Search::BFS(const Gen &gen) const {
     while (!q.empty()) {
         auto step = result[q.front()];
 
-        if (opt_s_) {
+        if (opt_s_ && gen.data().size() != 2) {
             //// early-stop optimization
             //// used only for optimal circulants
             if (prev_step != step) {
