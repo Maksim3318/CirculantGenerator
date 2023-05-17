@@ -16,10 +16,18 @@ int main() {
         if (query == "!q") {
             break;
         }
-        uint16_t v, k, amount = 10;
-        bool r = false, o = true;
+        uint16_t v = 0, k = 0, amount = 10;
+        bool r = false, o = true, isOK = true;
         std::istringstream task (query);
-        task >> v >> k;
+        if (!task.eof()) {
+            task >> v;
+        }
+        if (!task.eof()) {
+            task >> k;
+        }
+        if (k < 2 || v <= 2 * k + 1) {
+            isOK = false;
+        }
         if (!task.eof()) {
             std::string s;
             task >> s;
@@ -30,16 +38,18 @@ int main() {
                 r = true;
             }
             if (static_cast<int>(!o) + static_cast<int>(r) != s.size()) {
-                std::cout << err_msg << std::endl;
-                continue;
+                isOK = false;
             }
         }
         if (!task.eof()) {
             task >> amount;
-            if (o) {
-                std::cout << err_msg << std::endl;
-                continue;
+            if (o && !amount) {
+                isOK = false;
             }
+        }
+        if (!isOK) {
+            std::cout << err_msg << std::endl;
+            continue;
         }
 
         std::string rs = r ? "r" : "";
@@ -53,7 +63,7 @@ int main() {
 
         std::ofstream out(filepath);
         std::string sep = ",";
-        out << "Vertices,Gen set,Diameter,Average distance,BW,Connections" << std::endl;
+        out << "Vertices,Gen set,Diameter,Average distance,Bisection width,Connections" << std::endl;
 
         LOG_DURATION("C(" + std::to_string(v) + ", " + std::to_string(k) + ")");
         Search s(v, k, r, o, amount);
