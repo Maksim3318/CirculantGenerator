@@ -1,4 +1,4 @@
-Vertices,Gen set,Diameter,Average distance,BW,Connections
+Vertices,Gen set,Diameter,Average distance,Bisection width,Connections
 588,1 16 215,8,5.6644,464,1764
 588,1 104 227,8,5.6644,664,1764
 588,4 17 257,8,5.6644,556,1764
