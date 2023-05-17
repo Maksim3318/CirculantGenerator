@@ -1,0 +1,5 @@
+Vertices,Gen set,Diameter,Average distance,Bisection width,Connections
+401,1 32,14,9.45,66,802
+401,1 87,14,9.45,176,802
+401,1 106,14,9.45,214,802
+401,1 188,14,9.45,378,802
